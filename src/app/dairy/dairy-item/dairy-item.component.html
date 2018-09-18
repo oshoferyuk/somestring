@@ -1,0 +1,17 @@
+<div >
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Items</h5>
+      <div class="card-text">
+
+        <input class="new-todo" placeholder="Type name here..." autofocus="" [(ngModel)]="newItemText" (keyup.enter)="addNewItem()">
+
+        <div *ngFor="let item of dairyStore.getAllItems()">
+        <h3>{{item.item}}</h3>
+    </div>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+
+</div>

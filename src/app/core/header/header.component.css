@@ -1,0 +1,11 @@
+.app-header_primary{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+
+.app-header__secondary{
+  color: #808080;
+  font-size: 18px;
+}

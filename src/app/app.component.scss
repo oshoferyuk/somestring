@@ -1,0 +1,19 @@
+$header-color: #2b2f3e;
+
+.app-container {
+  position: relative;
+  margin-left: 300px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-sidebar {
+  border-top: 1px solid $header-color;
+  padding: 30px;
+  background: $header-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+}
