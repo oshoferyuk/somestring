@@ -1,3 +1,19 @@
-<p>
-  dairy-comment works!
-</p>
+<div class="card" *ngIf="dairyStore.selectedItem !== ''">
+  <div class="card-body">
+    <h5 class="card-title">{{dairyStore.getSelectedItem()}}</h5>
+    <div class="card-text">
+
+
+        <div *ngFor="let comment of dairyStore.getCurrentDesc()">
+          <li class="list-group-item">
+            <app-dairy-comment [comment]="comment"></app-dairy-comment>
+          </li>
+        </div>
+
+
+      <div class="row dairy-comments">
+        <div class="avatar col-2"></div>
+        <textarea (keydown.control.enter)="addDescription($event)" class="col-9"></textarea>
+      </div>
+    </div>
+  </div>

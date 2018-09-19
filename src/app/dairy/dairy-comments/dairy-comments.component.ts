@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DairyStore} from '../../core/models/dairy.store';
 
 @Component({
   selector: 'app-dairy-comments',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DairyCommentsComponent implements OnInit {
 
-  constructor() { }
+
+  dairyStore: DairyStore;
+
+  constructor(dairyStore: DairyStore) {
+    this.dairyStore = dairyStore;
+  }
 
   ngOnInit() {
   }
 
+  addDescription(event: any){
+    this.dairyStore.addDescription(event.target.value);
+    event.target.value = '';
+  }
 }
