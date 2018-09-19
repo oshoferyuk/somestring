@@ -2,6 +2,7 @@ import { Dairy } from "./dairy.model";
 
 export class DairyStore {
   dairyList: Array<Dairy>;
+  selectedItem = '';
 
   constructor() {
     let persistedDairy = JSON.parse(
@@ -31,8 +32,17 @@ export class DairyStore {
   }
 
   getAllItems(){
-    console.log('zzzzz');
     console.log(this.dairyList);
     return this.dairyList;
   }
+
+  setSelectedItem(item: string){
+    this.selectedItem = item;
+  }
+
+  getSelectedItem(){
+    return this.selectedItem;
+  }
+
+
 }

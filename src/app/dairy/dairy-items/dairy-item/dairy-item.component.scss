@@ -1,0 +1,37 @@
+.dairy-item__container{
+  margin-top: 20px;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-around;
+
+  .point{
+    width: 39px;
+    height: 30px;
+    background-color: #27CCC0;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 40px;
+    padding: 3px 10px;
+    border-radius: 10%;
+  }
+}
+
+.dairy-item__text-wrapper{
+  width: 200px;
+}
+
+.dairy-item__delete-btn{
+  margin-left: 40px;
+  width: 97px;
+  height: 34px;
+  border: 2px solid #FF3159;
+  color: #FF3159;
+  background-color: #fff;
+  border-radius: 5px;
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+}
+

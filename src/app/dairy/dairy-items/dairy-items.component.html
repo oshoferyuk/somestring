@@ -1,17 +1,19 @@
-<div >
-  <div class="card">
+ <div class="card">
     <div class="card-body">
       <h5 class="card-title">Items</h5>
       <div class="card-text">
 
+        <div class="dairy-items__control-group">
         <input class="new-todo" placeholder="Type name here..." autofocus="" [(ngModel)]="newItemText" (keyup.enter)="addNewItem()">
+        <button class="btn btn-primary" (click)="addNewItem()">Add New</button>
+        </div>
 
         <div *ngFor="let item of dairyStore.getAllItems()">
-        <h3>{{item.item}}</h3>
+        <app-dairy-item [item]="item.name" [desc]="item.desc.length"></app-dairy-item>
     </div>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+
     </div>
   </div>
 
 
-</div>
+

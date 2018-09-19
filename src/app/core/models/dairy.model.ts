@@ -1,12 +1,10 @@
 export class Dairy {
-  item: string;
+  name: string;
   desc: Array<string>;
 
 
-  constructor(item: string, desc = []) {
-    console.log('-----');
-    console.log(item);
-    this.item = item;
+  constructor(name: string, desc = []) {
+    this.name = name;
     this.desc = desc;
   }
 }

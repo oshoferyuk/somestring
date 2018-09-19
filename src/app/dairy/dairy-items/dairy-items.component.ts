@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {DairyStore} from '../../core/models/dairy.store';
 
 @Component({
-  selector: 'app-dairy-item',
-  templateUrl: './dairy-item.component.html',
-  styleUrls: ['./dairy-item.component.scss']
+  selector: 'app-dairy-items',
+  templateUrl: './dairy-items.component.html',
+  styleUrls: ['./dairy-items.component.scss']
 })
-export class DairyItemComponent implements OnInit {
+export class DairyItemsComponent implements OnInit {
 
   dairyStore: DairyStore;
   newItemText = '';
