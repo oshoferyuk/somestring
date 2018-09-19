@@ -1,7 +1,7 @@
-<div class="dairy-item__container">
+<div class="dairy-item__container" (click)="setSelectedItem(itemText)">
 <div class="dairy-item__text-wrapper">
   <span class="item-name">{{itemText}}</span>
   <span class="point">{{descNumber}}</span>
 </div>
-  <button class="dairy-item__delete-btn" type="button" (click)="deleteItem()">Delete</button>
+  <button class="dairy-item__delete-btn" type="button" (click)="deleteItem(itemText)">Delete</button>
 </div>

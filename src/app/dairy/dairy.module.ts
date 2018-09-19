@@ -6,10 +6,11 @@ import { DairyCommentsComponent } from './dairy-comments/dairy-comments.componen
 import { DairyItemsComponent } from './dairy-items/dairy-items.component';
 import {FormsModule} from '@angular/forms';
 import { DairyItemComponent } from './dairy-items/dairy-item/dairy-item.component';
+import { DairyCommentComponent } from './dairy-comments/dairy-comment/dairy-comment.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, DairyRoutingModule],
-  declarations: [DairyComponent, DairyCommentsComponent, DairyItemsComponent, DairyItemComponent],
+  declarations: [DairyComponent, DairyCommentsComponent, DairyCommentComponent, DairyItemsComponent, DairyItemComponent, DairyCommentComponent],
   exports: [DairyComponent]
 })
 export class DairyModule {}

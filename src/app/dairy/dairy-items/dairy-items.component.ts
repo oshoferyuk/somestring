@@ -30,4 +30,8 @@ export class DairyItemsComponent implements OnInit {
     }
   }
 
+  changeSelectedItem(item: string){
+    this.dairyStore.setSelectedItem(item);
+  }
+
 }

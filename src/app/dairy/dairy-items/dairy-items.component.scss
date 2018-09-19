@@ -5,9 +5,10 @@
 .dairy-items__control-group{
   display: flex;
   flex: 1 0 auto;
-  justify-content: center;
+  justify-content: space-between;
 
   input{
+
     padding: 12px;
     border-radius: 5px;
     height: 37px;
@@ -16,7 +17,7 @@
   }
 
   button{
-    margin-left: 20px;
+    margin-left: 10px;
     height: 37px;
     background-color: #27CCC0;
   }

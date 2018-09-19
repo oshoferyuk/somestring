@@ -1,17 +1,17 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import {Dairy} from '../../../core/models/dairy.model';
+import {Component, OnInit, Input, Output, OnChanges} from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import {Dairy} from '../../../core/models/dairy.model';
 
 @Component({
   selector: 'app-dairy-item',
   templateUrl: './dairy-item.component.html',
   styleUrls: ['./dairy-item.component.scss']
 })
-export class DairyItemComponent implements OnInit {
+export class DairyItemComponent implements OnInit, OnChanges {
 
-  @Input() item: string;
-  @Input() desc: number;
-  @Output() commentsData: EventEmitter<number> = new EventEmitter<number>();
+  @Input() name: string;
+  @Input() count: number
+  @Output() changeSelectedItem: EventEmitter<string> = new EventEmitter<string>();
 
   itemText: string;
   descNumber: number;
@@ -19,13 +19,24 @@ export class DairyItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.itemText = this.item;
-    this.descNumber = this.desc;
+    // console.log(this.dairy);
+    this.itemText = this.name;
+    this.descNumber = this.count;
 
   }
 
-  deleteItem(){
+  ngOnChanges(){
+    this.descNumber = this.count;
+  }
 
+
+
+  deleteItem(){
+    this.setSelectedItem('');
+  }
+
+  setSelectedItem(selectedItem: string){
+    this.changeSelectedItem.emit(selectedItem);
   }
 
 }
