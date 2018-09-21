@@ -1,4 +1,4 @@
- <div class="card">
+ <div class="card dairy-items__container">
     <div class="card-body">
       <h5 class="card-title">Items</h5>
       <div class="card-text">
@@ -7,14 +7,14 @@
         <input class="new-todo" placeholder="Type name here..." autofocus="" [(ngModel)]="newItemText" (keyup.enter)="addNewItem()">
         <button class="btn btn-primary" (click)="addNewItem()">Add New</button>
         </div>
-
         <ul class="list-group" *ngFor="let item of dairyStore.getAllItems()">
-          <li class="list-group-item">
-            <app-dairy-item [name]="item.name" [count]="item.desc.length" (changeSelectedItem)="changeSelectedItem($event)"></app-dairy-item>
+          <li class="list-group-item" [ngClass]="{highlight: item.name == highlightItem}">
+            <app-dairy-item [name]="item.name"
+                            [count]="item.desc.length"
+                            (changeSelectedItem)="changeSelectedItem($event)"
+                            (deleteCurrentItem)="deleteCurrentItem(item)">
+            </app-dairy-item>
           </li>
         </ul>
     </div>
   </div>
-
-
-

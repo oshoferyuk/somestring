@@ -1,3 +1,8 @@
+$color-back-point: #27CCC0;
+$color-point: #fff;
+$color-dairy-border: #FF3159;
+$color-dairy-base: #FF3159;
+
 .dairy-item__container{
   margin-top: 20px;
   cursor: pointer;
@@ -8,8 +13,8 @@
   .point{
     width: 39px;
     height: 30px;
-    background-color: #27CCC0;
-    color: #fff;
+    background-color: $color-back-point;
+    color: $color-point;
     font-size: 13px;
     text-align: center;
     line-height: 20px;
@@ -27,9 +32,9 @@
   margin-left: 40px;
   width: 97px;
   height: 34px;
-  border: 2px solid #FF3159;
-  color: #FF3159;
-  background-color: #fff;
+  border: 2px solid $color-dairy-border;
+  color: $color-dairy-base;
+  background-color: $color-point;
   border-radius: 5px;
   float: right;
   display: inline-block;

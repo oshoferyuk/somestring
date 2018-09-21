@@ -1,10 +1,10 @@
 import { NgModule, Optional, SkipSelf } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import {HeaderComponent} from "./header/header.component";
-import {DairyStore} from './models/dairy.store';
+
+import { HeaderComponent } from "./header/header.component";
+import { DairyStore } from "./models/dairy.store";
 
 
-// import { I18nService, NotifyService, SessionTimeoutService } from '.';
 
 @NgModule({
   imports: [CommonModule],
